@@ -8,11 +8,11 @@ const currentDayHumidity = document.getElementById('current-day-humidity')
 
 const apiKey = '3cac805e6362cc29d52eeef14b2bcc3a';
 
-function getOneCallApi (lon, lat, datetime){
+function getOneCallApi (lon, lat){
 
     return fetch (`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid={apiKey}`)
-        .then(function(response){
-            return response.json()
+        .then(function(result){
+            return result.json()
         })
        
 }
@@ -20,15 +20,24 @@ function getOneCallApi (lon, lat, datetime){
 function getWeatherData(city) {
 
     return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
-    .then(function (response){
-        return response.json();
+    .then(function (result){
+        return result.json();
     })
     .then(function(currentWeather){
     
         console.log(currentWeather);
 
-        returns.getOneCallApi(currentWeather.coord.lon, currentWeather.coord.lat, currentWeather.dt)
+        return getOneCallApi(currentWeather.coord.lon, currentWeather.coord.lat, currentWeather.dt)
     })
+    const weatherPromise = result.json()
+    return weatherPromise
+
+    .then(function (weatherPromise) {
+        const weatherIcon = $("<img>")
+
+        const temp = weatherPromise.main.temp
+        const conditions = weatherPromise.weather[0].main
+    }
 
 }
 
