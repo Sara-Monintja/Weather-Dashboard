@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="styl/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
     
@@ -41,18 +41,17 @@
     <!-- current day row -->
     <div class="row">
         <div class="col-12">
-            Current Day card
-            <div class="card">
-                <img class="card-img-top" src="/images/pathToYourImage.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title">Atlanta 2022-06-01</h4>
-                  <div class="card-text">
+            Current Day weather
+            <div class="weather">
+                <img class="icon" src="/images/pathToYourImage.png" alt="Card image cap">
+                <div class="weather-body">
+                  <h4 class="current-day-city">Atlanta 2022-06-01</h4>
+                  <div class="weather-text">
                     <p> Temp: <span if="current-day-temp">12c</span> </p>
                     <p> Wind: <span if="current-day-wind">12</span> </p>
                     <p> Humidity: <span if="current-day-humidity">12</span> </p>
                     <p> UV: <span if="current-day-uv">12</span> </p>
                   </div>
-                  <a href="#!" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
               
@@ -68,26 +67,74 @@
         <h2>5-day Forecast:</h2>
     </div>
     <div class="col-2"></div>
-        <div class="card">
-            <img class="card-img-top" src="/images/pathToYourImage.png" alt="Card image cap">
-            <div class="card-body">
-                <h6 class="card-title">2022-06-02</h6>
-                <p class="card-text">
-                    <p> Temp: <span if="current-day-temp">12c</span> </p>
-                    <p> Wind: <span if="current-day-wind">12</span> </p>
-                    <p> Humidity: <span if="current-day-humidity">12</span> </p>
+        <div class="weather>
+            <img class="weather-img-top-1" src="/images/pathToYourImage.png" alt="Card image cap">
+            <div class="weather-body">
+                <h6 class="weather-date" id="day1">2022-06-02</h6>
+                <p class="weather-text">
+                    <p> Temp: <span if="current-day-temp-1">12c</span> </p>
+                    <p> Wind: <span if="current-day-wind-1">12</span> </p>
+                    <p> Humidity: <span if="current-day-humidity-1">12</span> </p>
                 </p>
-                <a href="#!" class="btn btn-primary">Go somewhere</a>
+            </div>
         </div>
     </div>
-
-
+    <div class="col-2"></div>
+        <div class="weather">
+            <img class="weather-img-top-2" src="/images/pathToYourImage.png" alt="Card image cap">
+            <div class="weather-body">
+                <h6 class="weather-date" id="day2">2022-06-02</h6>
+                <p class="weather-text">
+                    <p> Temp: <span if="current-day-temp-2">12c</span> </p>
+                    <p> Wind: <span if="current-day-wind-2">12</span> </p>
+                    <p> Humidity: <span if="current-day-humidity-2">12</span> </p>
+                </p>
+            </div>
         </div>
+    </div>
+    <div class="col-2"></div>
+        <div class="weather">
+            <img class="weather-img-top-3" src="/images/pathToYourImage.png" alt="Card image cap">
+            <div class="weather-body">
+                <h6 class="weather-date" id="day3">2022-06-02</h6>
+                <p class="weather-text">
+                    <p> Temp: <span if="current-day-temp-3">12c</span> </p>
+                    <p> Wind: <span if="current-day-wind-3">12</span> </p>
+                    <p> Humidity: <span if="current-day-humidity-3">12</span> </p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="weather">
+        <img class="weather-img-top-4" src="/images/pathToYourImage.png" alt="Card image cap">
+        <div class="weather-body">
+            <h6 class="weather-date" id="day4">2022-06-02</h6>
+            <p class="weather-text">
+                <p> Temp: <span if="current-day-temp-4">12c</span> </p>
+                <p> Wind: <span if="current-day-wind-4">12</span> </p>
+                <p> Humidity: <span if="current-day-humidity-4">12</span> </p>
+            </p>
+        </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="weather">
+        <img class="weather-img-top-5" src="/images/pathToYourImage.png" alt="Card image cap">
+        <div class="weather-body">
+            <h6 class="weather-date" id="day5">2022-06-02</h6>
+            <p class="weather-text">
+                <p> Temp: <span if="current-day-temp-5">12c</span> </p>
+                <p> Wind: <span if="current-day-wind-5">12</span> </p>
+                <p> Humidity: <span if="current-day-humidity-5">12</span> </p>
+            </p>
+        </div>  
+    </div>
+
+    
+    
+    
+
     </section>
-
-
-
-
 
 
 
@@ -98,7 +145,7 @@
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.3/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 <script src="./app.js"></script>
