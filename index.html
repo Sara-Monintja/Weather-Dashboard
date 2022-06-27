@@ -24,16 +24,14 @@
 <!-- list of prev searches -->
         <div class="col-12 col-sm-3">
            
-            <form id="search-from">
+            <form id="search-form">
                 
                 <div class="form-group">
                   <label for="formGroupExampleInput">Search for a City</label>
                   <input type="text" class="form-control" id="input-search" placeholder="City">
                 </div>
                 <button class="btn btn-primary d-block w-100" type="submit">Search</button>
-              </form>
-              
-
+            </form>
 
         </div>
         <div class="col-12 col-sm-9">
@@ -63,23 +61,24 @@
     </div>
 
 <!-- 5 cols, each -- card that represent the future weather -->    
-    <div class="row forecast-row flex-wrap">
-        <h2>5-day Forecast:</h2>
+    <div class="col forecast-col flex-wrap">
+         <h2>5-day Forecast:</h2>
     </div>
-    <div class="col-2"></div>
-        <div class="weather>
-            <img class="weather-img-top-1" src="/images/pathToYourImage.png" alt="Card image cap">
-            <div class="weather-body">
-                <h6 class="weather-date" id="day1">2022-06-02</h6>
-                <p class="weather-text">
-                    <p> Temp: <span if="current-day-temp-1">12c</span> </p>
-                    <p> Wind: <span if="current-day-wind-1">12</span> </p>
-                    <p> Humidity: <span if="current-day-humidity-1">12</span> </p>
-                </p>
+     <section class="column">
+        <div class="col-2"></div>
+         <div class="weather>
+                <img class="weather-img-top-1" src="/images/pathToYourImage.png" alt="Card image cap">
+                <div class="weather-body">
+                    <h6 class="weather-date" id="day1">2022-06-02</h6>
+                    <p class="weather-text">
+                        <p> Temp: <span if="current-day-temp-1">12c</span> </p>
+                       <p> Wind: <span if="current-day-wind-1">12</span> </p>
+                       <p> Humidity: <span if="current-day-humidity-1">12</span> </p>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-2"></div>
+        <div class="col-2"></div>
         <div class="weather">
             <img class="weather-img-top-2" src="/images/pathToYourImage.png" alt="Card image cap">
             <div class="weather-body">
@@ -91,8 +90,8 @@
                 </p>
             </div>
         </div>
-    </div>
-    <div class="col-2"></div>
+        </div>
+        <div class="col-2"></div>
         <div class="weather">
             <img class="weather-img-top-3" src="/images/pathToYourImage.png" alt="Card image cap">
             <div class="weather-body">
@@ -104,9 +103,9 @@
                 </p>
             </div>
         </div>
-    </div>
-    <div class="col-2"></div>
-    <div class="weather">
+        </div>
+        <div class="col-2"></div>
+        <div class="weather">
         <img class="weather-img-top-4" src="/images/pathToYourImage.png" alt="Card image cap">
         <div class="weather-body">
             <h6 class="weather-date" id="day4">2022-06-02</h6>
@@ -116,9 +115,9 @@
                 <p> Humidity: <span if="current-day-humidity-4">12</span> </p>
             </p>
         </div>
-    </div>
-    <div class="col-2"></div>
-    <div class="weather">
+        </div>
+        <div class="col-2"></div>
+        <div class="weather">
         <img class="weather-img-top-5" src="/images/pathToYourImage.png" alt="Card image cap">
         <div class="weather-body">
             <h6 class="weather-date" id="day5">2022-06-02</h6>
@@ -128,7 +127,7 @@
                 <p> Humidity: <span if="current-day-humidity-5">12</span> </p>
             </p>
         </div>  
-    </div>
+        </div>
 
     
     
